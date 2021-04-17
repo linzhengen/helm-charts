@@ -15,5 +15,9 @@ jobs:
         id: lint
         uses: helm/chart-testing-action@v1.0.0
         with:
-          command: lint
-          config: ci/ct.yaml
+          command: |
+            cd stable
+            for d in */; do
+                echo "Linting chart ${d} w/ helm v3"
+                helm lint ${d}
+            done
