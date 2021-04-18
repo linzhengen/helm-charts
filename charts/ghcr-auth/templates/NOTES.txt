@@ -1,5 +1,0 @@
-1. Usage:
-```
-  imagePullSecrets:
-  - name: {{ include "ghcr-auth.fullname" . }}
-```
