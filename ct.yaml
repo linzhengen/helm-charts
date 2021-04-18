@@ -6,4 +6,3 @@ chart-dirs:
 chart-repos:
   - linzhengen=https://linzhengen.github.io/helm-charts
 helm-extra-args: --timeout 600s
-#validate-maintainers: false
