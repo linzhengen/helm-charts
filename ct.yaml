@@ -1,2 +1,5 @@
 chart-dirs:
   - stable
+chart-repos:
+  - linzhengen=https://linzhengen.github.io/helm-charts
+helm-extra-args: --timeout 600s
