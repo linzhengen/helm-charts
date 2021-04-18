@@ -3,6 +3,16 @@ entries:
   ghcr-auth:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2021-04-18T10:22:36.545744972Z"
+    description: A ghcr.io registory auth Helm chart for Kubernetes
+    digest: 8f9e1304c3fdac47ed6bc117e32b4b9a2f589ec5f901453a6d52ebf7baa8363b
+    name: ghcr-auth
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/ghcr-auth-0.1.1/ghcr-auth-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2021-04-18T10:13:43.827845642Z"
     description: A ghcr.io registory auth Helm chart for Kubernetes
     digest: 86fe3ca9f28f3c255a80abf25751392c70602dfc11f7c8e4074fa68235d59167
@@ -11,4 +21,4 @@ entries:
     urls:
     - https://github.com/linzhengen/helm-charts/releases/download/ghcr-auth-0.1.0/ghcr-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2021-04-18T19:01:11.986896+09:00"
+generated: "2021-04-18T10:22:36.545752072Z"
