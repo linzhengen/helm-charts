@@ -5,13 +5,13 @@ set -eu
 rm -f .helm-docs-md5sum-before .helm-docs-md5sum-after
 
 # Get md5sum of all README.md files before running helm-docs
-md5sum stable/*/README.md > .helm-docs-md5sum-before
+md5sum charts/*/README.md > .helm-docs-md5sum-before
 
 # Run helm-docs to generate all README.md files from the template
 helm-docs --template-files ./ci/README.md.gotmpl
 
 # Get md5sum of all README.md files after running helm-docs
-md5sum stable/*/README.md > .helm-docs-md5sum-after
+md5sum charts/*/README.md > .helm-docs-md5sum-after
 
 # Run diff to check for any changes that are missing
 CHANGED_FILES=$(diff .helm-docs-md5sum-before .helm-docs-md5sum-after | grep -v ++ | grep ^+ | awk '{print $2}')
