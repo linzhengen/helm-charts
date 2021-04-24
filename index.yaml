@@ -3,6 +3,16 @@ entries:
   cronjob:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2021-04-24T11:03:40.861777582Z"
+    description: A CronJob Helm chart for Kubernetes
+    digest: 16fa886184b4800802d9db03af9d6b5c27878e4b7e5d4cfe658ee1e9124aa8f5
+    name: cronjob
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/cronjob-0.1.1/cronjob-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2021-04-19T15:42:36.194607382Z"
     description: A CronJob Helm chart for Kubernetes
     digest: 254fb76c6004987dfa6b34a4774cd7b8cb5de01e7e9f8d3b55a6b97b96e7bfdf
@@ -12,6 +22,16 @@ entries:
     - https://github.com/linzhengen/helm-charts/releases/download/cronjob-0.1.0/cronjob-0.1.0.tgz
     version: 0.1.0
   ghcr-auth:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-04-24T11:03:40.962553894Z"
+    description: A ghcr.io registory auth Helm chart for Kubernetes
+    digest: c701fc6f52cb4c7606d0fe994f3d863d93e92055b04245eba9fe65a764f5c113
+    name: ghcr-auth
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/ghcr-auth-0.1.2/ghcr-auth-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v2
     appVersion: 0.1.0
     created: "2021-04-18T10:22:36.545744972Z"
@@ -32,4 +52,4 @@ entries:
     urls:
     - https://github.com/linzhengen/helm-charts/releases/download/ghcr-auth-0.1.0/ghcr-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2021-04-19T15:42:36.194619682Z"
+generated: "2021-04-24T11:03:40.962575796Z"
