@@ -3,6 +3,18 @@ entries:
   cronjob:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2021-07-26T16:35:48.116399981Z"
+    description: A CronJob Helm chart for Kubernetes
+    digest: 89472b04d8bd2694b0daa53be5e35b6e4e704dd59d51ce270da7e44dd0ab5202
+    maintainers:
+    - name: linzhengen
+    name: cronjob
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/cronjob-0.1.3/cronjob-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2021-04-24T11:03:40.861777582Z"
     description: A CronJob Helm chart for Kubernetes
     digest: 16fa886184b4800802d9db03af9d6b5c27878e4b7e5d4cfe658ee1e9124aa8f5
@@ -22,6 +34,18 @@ entries:
     - https://github.com/linzhengen/helm-charts/releases/download/cronjob-0.1.0/cronjob-0.1.0.tgz
     version: 0.1.0
   ghcr-auth:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-07-26T16:35:48.188647141Z"
+    description: A ghcr.io registory auth Helm chart for Kubernetes
+    digest: 13d26ff14449851c493c844b60d6bd62cc070bf649fd7b65f78d39fd4e59de81
+    maintainers:
+    - name: linzhengen
+    name: ghcr-auth
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/ghcr-auth-0.1.5/ghcr-auth-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v2
     appVersion: 0.1.0
     created: "2021-04-24T11:03:40.962553894Z"
@@ -52,4 +76,17 @@ entries:
     urls:
     - https://github.com/linzhengen/helm-charts/releases/download/ghcr-auth-0.1.0/ghcr-auth-0.1.0.tgz
     version: 0.1.0
-generated: "2021-04-24T11:03:40.962575796Z"
+  web:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-07-26T16:35:48.249819102Z"
+    description: A web server Helm chart for Kubernetes
+    digest: 6f28664d2906e90746ed84e4d990592e8c1b94185571840229913f0e1caf18ac
+    maintainers:
+    - name: linzhengen
+    name: web
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/web-0.1.4/web-0.1.4.tgz
+    version: 0.1.4
+generated: "2021-07-26T16:35:48.249862004Z"
