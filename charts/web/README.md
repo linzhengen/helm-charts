@@ -77,3 +77,8 @@ helm install my-release linzhengen/web -f values.yaml
 | serviceAccount.name | string | `""` |  |
 | tolerations | list | `[]` |  |
 
+## Maintainers
+
+| Name | Email | Url |
+| ---- | ------ | --- |
+| linzhengen |  |  |
