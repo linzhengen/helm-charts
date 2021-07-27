@@ -13,6 +13,7 @@ helm install my-release linzhengen/<chart>
 
 - [cronjob](https://artifacthub.io/packages/helm/linzhengen/cronjob)
 - [ghcr-auth](https://artifacthub.io/packages/helm/linzhengen/ghcr-auth)
+- [web](https://artifacthub.io/packages/helm/linzhengen/web)
 
 ### Running CI tests locally
 `helm-docs`:
