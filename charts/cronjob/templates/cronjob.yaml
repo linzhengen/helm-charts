@@ -41,7 +41,7 @@ spec:
           containers:
           - image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
             imagePullPolicy: {{ .Values.image.imagePullPolicy }}
-            name: {{ .Values.name }}
+            name: {{ .Chart.Name }}
             {{- with .Values.env }}
             env:
 {{ toYaml . | indent 12 }}

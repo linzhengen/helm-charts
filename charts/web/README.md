@@ -1,8 +1,10 @@
 # web
 
-![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.1.0](https://img.shields.io/badge/AppVersion-0.1.0-informational?style=flat-square)
+![Version: 0.1.7](https://img.shields.io/badge/Version-0.1.7-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.1.0](https://img.shields.io/badge/AppVersion-0.1.0-informational?style=flat-square)
 
 A web server Helm chart for Kubernetes
+
+**Homepage:** <https://artifacthub.io/packages/helm/linzhengen/web>
 
 ## How to install this chart
 
@@ -36,6 +38,10 @@ To install with custom values file:
 helm install my-release linzhengen/web -f values.yaml
 ```
 
+## Source Code
+
+* <https://github.com/linzhengen/helm-charts/tree/main/charts/web>
+
 ## Values
 
 | Key | Type | Default | Description |
@@ -50,7 +56,7 @@ helm install my-release linzhengen/web -f values.yaml
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"nginx"` |  |
-| image.tag | string | `""` |  |
+| image.tag | string | `"latest"` |  |
 | imagePullSecrets | list | `[]` |  |
 | ingress.annotations | object | `{}` |  |
 | ingress.className | string | `""` |  |
@@ -70,7 +76,7 @@ helm install my-release linzhengen/web -f values.yaml
 | replicaCount | int | `1` |  |
 | resources | object | `{}` |  |
 | securityContext | object | `{}` |  |
-| service.port | int | `80` |  |
+| service.port | int | `8080` |  |
 | service.type | string | `"ClusterIP"` |  |
 | serviceAccount.annotations | object | `{}` |  |
 | serviceAccount.create | bool | `true` |  |
