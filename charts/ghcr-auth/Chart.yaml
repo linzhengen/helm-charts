@@ -22,3 +22,8 @@ appVersion: 0.1.0
 
 maintainers:
   - name: linzhengen
+home: https://artifacthub.io/packages/helm/linzhengen/ghcr-auth
+keywords:
+  - ghcr-auth
+sources:
+  - https://github.com/linzhengen/helm-charts/tree/main/charts/ghcr-auth

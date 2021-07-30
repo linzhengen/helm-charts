@@ -25,3 +25,8 @@ appVersion: "0.1.0"
 
 maintainers:
   - name: linzhengen
+home: https://artifacthub.io/packages/helm/linzhengen/cronjob
+keywords:
+  - cronjob
+sources:
+  - https://github.com/linzhengen/helm-charts/tree/main/charts/cronjob
