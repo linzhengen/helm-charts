@@ -3,6 +3,23 @@ entries:
   cronjob:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2021-07-30T08:48:41.166083797Z"
+    description: A CronJob Helm chart for Kubernetes
+    digest: 7e8bf80da1677221f19bc51e5bd254680369f00eb6557c4515afbf13fbb109c9
+    home: https://artifacthub.io/packages/helm/linzhengen/cronjob
+    keywords:
+    - cronjob
+    maintainers:
+    - name: linzhengen
+    name: cronjob
+    sources:
+    - https://github.com/linzhengen/helm-charts/tree/main/charts/cronjob
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/cronjob-0.1.5/cronjob-0.1.5.tgz
+    version: 0.1.5
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2021-07-26T16:35:48.116399981Z"
     description: A CronJob Helm chart for Kubernetes
     digest: 89472b04d8bd2694b0daa53be5e35b6e4e704dd59d51ce270da7e44dd0ab5202
@@ -34,6 +51,23 @@ entries:
     - https://github.com/linzhengen/helm-charts/releases/download/cronjob-0.1.0/cronjob-0.1.0.tgz
     version: 0.1.0
   ghcr-auth:
+  - apiVersion: v2
+    appVersion: 0.1.0
+    created: "2021-07-30T08:48:41.251663447Z"
+    description: A ghcr.io registory auth Helm chart for Kubernetes
+    digest: 97fe3e33f52ded0961f22d3a589e3c0ae7a348a189f4e2e5e6aceec06f11f6d9
+    home: https://artifacthub.io/packages/helm/linzhengen/ghcr-auth
+    keywords:
+    - ghcr-auth
+    maintainers:
+    - name: linzhengen
+    name: ghcr-auth
+    sources:
+    - https://github.com/linzhengen/helm-charts/tree/main/charts/ghcr-auth
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/ghcr-auth-0.1.6/ghcr-auth-0.1.6.tgz
+    version: 0.1.6
   - apiVersion: v2
     appVersion: 0.1.0
     created: "2021-07-26T16:35:48.188647141Z"
@@ -79,6 +113,24 @@ entries:
   web:
   - apiVersion: v2
     appVersion: 0.1.0
+    created: "2021-07-30T08:48:41.342068168Z"
+    description: A web server Helm chart for Kubernetes
+    digest: d4452c4d8048aa83d3d2a9133facd4d1e4e93b8117b95dce0348b0f8a77fdf2e
+    home: https://artifacthub.io/packages/helm/linzhengen/web
+    keywords:
+    - web
+    - api
+    maintainers:
+    - name: linzhengen
+    name: web
+    sources:
+    - https://github.com/linzhengen/helm-charts/tree/main/charts/web
+    type: application
+    urls:
+    - https://github.com/linzhengen/helm-charts/releases/download/web-0.1.7/web-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v2
+    appVersion: 0.1.0
     created: "2021-07-26T16:35:48.249819102Z"
     description: A web server Helm chart for Kubernetes
     digest: 6f28664d2906e90746ed84e4d990592e8c1b94185571840229913f0e1caf18ac
@@ -89,4 +141,4 @@ entries:
     urls:
     - https://github.com/linzhengen/helm-charts/releases/download/web-0.1.4/web-0.1.4.tgz
     version: 0.1.4
-generated: "2021-07-26T16:35:48.249862004Z"
+generated: "2021-07-30T08:48:41.342119469Z"
