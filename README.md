@@ -1,5 +1,7 @@
 # helm-charts
-
+[![Helm docs](https://github.com/linzhengen/helm-charts/actions/workflows/helm-docs.yml/badge.svg)](https://github.com/linzhengen/helm-charts/actions/workflows/helm-docs.yml)
+[![Lint and Test Charts](https://github.com/linzhengen/helm-charts/actions/workflows/lint-test.yaml/badge.svg)](https://github.com/linzhengen/helm-charts/actions/workflows/lint-test.yaml)
+[![Release Charts](https://github.com/linzhengen/helm-charts/actions/workflows/release.yaml/badge.svg)](https://github.com/linzhengen/helm-charts/actions/workflows/release.yaml)
 ## TLDR
 
 ```console
