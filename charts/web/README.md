@@ -1,8 +1,10 @@
 # web
 
-![Version: 0.1.4](https://img.shields.io/badge/Version-0.1.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.1.0](https://img.shields.io/badge/AppVersion-0.1.0-informational?style=flat-square)
+![Version: 0.1.5](https://img.shields.io/badge/Version-0.1.5-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.1.0](https://img.shields.io/badge/AppVersion-0.1.0-informational?style=flat-square)
 
 A web server Helm chart for Kubernetes
+
+**Homepage:** <https://artifacthub.io/packages/helm/linzhengen/web>
 
 ## How to install this chart
 
@@ -35,6 +37,10 @@ To install with custom values file:
 ```console
 helm install my-release linzhengen/web -f values.yaml
 ```
+
+## Source Code
+
+* <https://github.com/linzhengen/helm-charts/tree/main/charts/web>
 
 ## Values
 
