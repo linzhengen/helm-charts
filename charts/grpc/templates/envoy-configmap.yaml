@@ -1,0 +1,91 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: envoy-config
+data:
+  envoy.yaml: |
+    static_resources:
+      listeners:
+        - name: listener_0
+          address:
+            socket_address:
+              address: {{ .Values.envoy.config.listenerAddress | quote }}
+              port_value: {{ .Values.envoy.config.listenerPort }}
+          filter_chains:
+            - filters:
+                - name: envoy.filters.network.http_connection_manager
+                  typed_config:
+                    "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+                    access_log:
+                      - name: envoy.access_loggers.stdout
+                        typed_config:
+                          "@type": type.googleapis.com/envoy.extensions.access_loggers.stream.v3.StdoutAccessLog
+                    codec_type: AUTO
+                    stat_prefix: egress
+                    route_config:
+                      name: local_route
+                      virtual_hosts:
+                        - name: grpc-server
+                          domains:
+                            - "*"
+                          routes:
+                          {{- range $index, $egressClusters := .Values.envoy.config.egressClusters }}
+                            {{ range $egressClusters.routes }}
+                            - match:
+                                prefix: {{ .prefix | quote }}
+                              route:
+                                cluster:  {{ $egressClusters.name }}
+                                retry_policy:
+                                  retry_on: {{ .retryPolicy.retryOn }}
+                                  num_retries: {{ .retryPolicy.numRetries }}
+                                  host_selection_retry_max_attempts: {{ .retryPolicy.hostSelectionRetryMaxAttempts }}
+                                  retry_host_predicate:
+                                    - name: envoy.retry_host_predicates.previous_hosts
+                              {{- end }}
+                            {{- end }}
+                    http_filters:
+                      - name: envoy.filters.http.health_check
+                        typed_config:
+                          "@type": type.googleapis.com/envoy.extensions.filters.http.health_check.v3.HealthCheck
+                          pass_through_mode: false
+                          headers:
+                            - name: ":path"
+                              exact_match: "/healthz"
+                            - name: "x-envoy-livenessprobe"
+                              exact_match: "healthz"
+                      - name: envoy.filters.http.router
+                        typed_config: {}
+      clusters:
+        {{- range .Values.envoy.config.egressClusters }}
+        - name: {{ .name }}
+          connect_timeout: {{ .connectTimeout }}
+          type: STRICT_DNS
+          dns_lookup_family: V4_ONLY
+          lb_policy: ROUND_ROBIN
+          http2_protocol_options: {}
+          ignore_health_on_host_removal: true
+          common_lb_config:
+            healthy_panic_threshold:
+              value: {{ .commonLbConfig.healthyPanicThreshold }}
+          load_assignment:
+            cluster_name: {{ .name }}-grpc
+            endpoints:
+              - lb_endpoints:
+                  - endpoint:
+                      address:
+                        socket_address:
+                          address: {{ .socketAddress.address | quote }}
+                          port_value: {{ .socketAddress.port }}
+          health_checks:
+            timeout: 1s
+            interval: 10s
+            unhealthy_threshold: 2
+            healthy_threshold: 2
+            grpc_health_check: {}
+        {{- end }}
+    admin:
+      access_log_path: /dev/stdout
+      address:
+        socket_address:
+          address: 127.0.0.1
+          port_value: 8090
