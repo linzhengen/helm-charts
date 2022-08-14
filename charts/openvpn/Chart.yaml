@@ -1,0 +1,11 @@
+apiVersion: v2
+name: openvpn
+description: A openvpn Helm chart for Kubernetes
+type: application
+version: 0.1.0
+appVersion: 2.11.0
+home: https://github.com/linzhengen/helm-charts/tree/main/charts/openvpn
+icon: https://img.icons8.com/color/344/openvpn.png
+sources:
+  - https://github.com/linzhengen/dockerfiles/openvpn
+  - https://github.com/linzhengen/helm-charts/tree/main/charts/openvpn
